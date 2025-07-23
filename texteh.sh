@@ -3,11 +3,14 @@
 # textEh - A tool to export your git repository's codebase into text dumps.
 # Useful for creating readable, compressed, or chunked versions of your code for analysis, backups, or sharing.
 # Copyright (C) 2025 [Your Name Here]
+# Version: v0.1.0
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
 # the Free Software Foundation, either version 3 of the License, or
 # (at your option) any later version.
 # See the LICENSE file for details.
+
+VERSION="v0.1.0"
 
 set -e  # Exit on errors
 
@@ -16,6 +19,8 @@ if ! git rev-parse --is-inside-work-tree >/dev/null 2>&1; then
   echo "Error: textEh must be run inside a git repository to respect .gitignore."
   exit 1
 fi
+
+echo "Running textEh version $VERSION"
 
 # Get the project root and current run directory
 PROJECT_ROOT=$(git rev-parse --show-toplevel)
