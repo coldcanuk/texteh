@@ -1,0 +1,14 @@
+# JetBrains IDE folder
+.idea/
+
+# Output directory from the texteh.sh script
+/texteh/
+
+# General backup files
+*.bak
+
+# macOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
